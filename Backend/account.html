@@ -1,0 +1,49 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<html>
+<head>
+    <title> Create Account - TikTok Tech </title>
+
+    <link rel="stylesheet" href="">
+</head>
+<body> 
+    <div class="container">
+        <h1 class="neon" data-text="U"><span class="flicker-slow">TIKTOK</span><span class="flicker-fast">TECH</span></h1>
+        <div class="navbar">
+            <img src="images/logo.png" class="logo">;
+            <nav>
+                <ul>
+                    <li><a href ="/home">HOME</a></li>
+                    <li><a href ="">ABOUT</a></li>
+                    <li><a href ="">PRODUCTS</a></li>
+                    <li><a href ="">CONTACT US</a></li>
+                    <li><a href ="/login">CREATE ACCOUNT</a></li>
+
+                </ul>
+            </nav>
+            <img src="images/cart.png" class="cart">;
+        </div>
+        <div class="create-account">
+            <h1> Please Sign in </h1>
+            <form class = "form-signin" method = "POST" action = "/login">
+            {{ form.hidden_tag()}}
+            {{wtf.form_field(form.username)}}
+            {{wtf.form_field(form.password)}}
+            {{wtf.form_field(form.remember) }}
+            <p><span><input type="checkbox"></span> I agree to the terms of services.</p>
+            <button type="button" class="signim-btn">Sign in</button>
+            <hr>
+            <p class="or">OR</p>
+            <button type="button" class="signup-btn">Login with Email</button>
+            <p>Already have an account? <a href="#">Sign in</a></p>
+
+
+            </form>
+        </div>
+        <div class="social-links">
+            <a href="">INSTAGRAM</a>
+            <a href="">TWITTER</a>
+            <a href="">EMAIL</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,1 +1,2 @@
 # tiktoktech
+First hackathon project
